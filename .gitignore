@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# my configuration
+config_brandon.js
+token/token.json
