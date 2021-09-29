@@ -1,0 +1,98 @@
+font{
+    color: #ffffff;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	outline: none;
+	text-decoration: underline;
+}
+
+/* 這個讓list item可以橫排 */
+li {
+    display: inline-block;
+ }
+
+ body {
+    
+    background-color: #b39b5e;
+    height: 100%;
+}
+
+
+.text {
+    color: #ffffff;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  
+.content {
+    color: #242424;
+    background-color: #f25fff;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+  }
+
+.menu{
+    text-align:left;
+}
+
+.menu-item{
+    color: #ffffff;
+    font-size: 20px;
+    list-style: none outside;
+    margin-top: 4px;
+    position: relative;
+    width:"100%";
+    border:1px;
+	font-weight: 400;
+	padding: 0;
+	margin: 10px 15px;
+	transition: all 0.5s;
+	position: relative;
+    text-align:right;
+}
+ 
+.topic{
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 40%;
+    text-decoration: #ffffff;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    
+    }
+
+.hr {border-bottom: 1px solid white}
+.row { padding: 10px; color:#ffffff;  width: 100%; justify-content: center;}
+.row .label { font-weight:bold; padding: 10px;  }
+.row .field { display: table-cell; padding: 10px; }
+

@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/brandicast.css">
+        <script src="/js/brandicast.js"></script>
+    </head>
+    <body>
+        <p id="menu"></p>
+        <div class="topic">Generic Line Notify Service </div>
+        <script>
+            getHTTPContentPromise('/menu.html').then(d=>{
+                document.getElementById("menu").innerHTML = d;
+            });
+        </script>
+    </body>
+</html>

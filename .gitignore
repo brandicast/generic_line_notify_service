@@ -105,4 +105,4 @@ dist
 
 # my configuration
 config_brandon.js
-token/token.json
+token/token.json*

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/brandicast/generic_line_notify_service#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "log4js": "^6.3.0"
   }
 }

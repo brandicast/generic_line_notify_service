@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/brandicast.css">
+        <script src="/js/brandicast.js"></script>
+    </head>
+    <body>
+        <p id="menu"></p>
+
+        <div id="token_list" class="center">This is Services listing page </div>
+
+        <script>
+            const xmlhttp = new XMLHttpRequest();
+            
+            xmlhttp.onload = function () {
+            
+                const params = new URLSearchParams(window.location.search);
+                service = params.get("service")
+                myObj = JSON.parse(this.responseText);
+                
+                console.log (this.responseText) ;
+                console.log (myObj) ;
+                console.log (Object.keys(myObj).length) ;
+
+                var text = "" ;
+                if (myObj && Object.keys(myObj).length){
+                    
+                    for (let s in myObj)    {
+                        text += "<div class='row hr'> <a href='/service/" + s + "'>" + s + "</a></div>" ;
+                        text += getTokenList(myObj[s]);
+                    }
+                }
+                
+                console.log (text) ;
+                document.getElementById("token_list").innerHTML = text;
+            }
+            
+            xmlhttp.open("GET", "/access_token_list");
+            xmlhttp.send();
+    
+            function getTokenList(arr){
+                //for (let x in myObj[service]) {
+                let row = "";
+                for (var i = 0; i<arr.length; i++) {
+                    console.log ("x = "+i);
+                    row += "<div class='row center'><div class='label field'> State </div><div class='field'>" +arr[i].state + "</div>" +
+                    "<div class='label field'> Access Token</div><div class='field'><a href='/status?token=" + arr[i].access_token + "'>" + arr[i].access_token + "</a></div></div></div>";
+                }
+                console.log ("row = " + row) ;
+                return row ;
+            }
+
+            getHTTPContentPromise('/menu.html').then(d=>{
+                document.getElementById("menu").innerHTML = d;
+            });
+        </script>
+
+    </body>
+</html>

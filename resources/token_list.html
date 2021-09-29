@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="demo"> </p>
+
+    <p id="status"></p>
+
+    <script>
+        const xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.onload = function () {
+        
+            const params = new URLSearchParams(window.location.search);
+            service = params.get("service")
+            myObj = JSON.parse(this.responseText);
+            let text = "<table border='1'>"
+            for (let x in myObj[service]) {
+                text += "<tr><td> State </td><td>" + myObj[service][x].state + "</td><td> Access Token</td><td><a href='/status?token=" + myObj[service][x].access_token + "'>" + myObj[service][x].access_token + "</a</td></tr>";
+            }
+            text += "</table>"
+            document.getElementById("demo").innerHTML = text;
+        }
+        
+        xmlhttp.open("GET", "/access_token_list");
+        xmlhttp.send();
+
+    </script>
+</body>
+
+</html>
