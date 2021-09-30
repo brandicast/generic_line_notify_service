@@ -1,29 +1,33 @@
 module.exports = {
         line_notify : {
             service: { 
-                "IOT_BOT": {
+                "service1 ": {
                     client_id  :  '' ,
                     client_secret : '', 
                     redirect_uri : 'http://192.168.0.13:8888/code_receiver',
-                    success_page : './resources/success.html'  
+                    success_page : './resources/success.html',  
+                    token_list_page : './resources/token_list.html' 
                 },
-                "Generic Bot": {
+                "service2": {
                     client_id  :  '' ,
                     client_secret : '', 
-                    redirect_uri : 'http://192.168.0.13:8888/code_receiver',
-                    success_page : './resources/success.html'  
+                    redirect_uri : 'http://192.168.0.15:8888/code_receiver',
+                    success_page : './resources/success.html' , 
+                    token_list_page : './resources/token_list.html' 
                 },
-                "dummy": {
+                "service3": {
                     client_id  :  '' ,
                     client_secret : '', 
-                    redirect_uri : 'http://192.168.0.13:8888/code_receiver',
-                    success_page : './resources/success.html'  
+                    redirect_uri : 'http://192.168.0.15:8888/code_receiver',
+                    success_page : './resources/success.html' ,
+                    token_list_page : './resources/token_list.html' 
                 }
             },
             port : 8888,
             host : "0.0.0.0",
             token_folder: "./token", 
-            token_file: "token.json"
+            token_file: "token.json",
+            public_folder: "./public"
         }, 
         log4js_set: {
             appenders: {
