@@ -28,7 +28,7 @@ app.get(/service/, (req, res) => {
 
     console.log(req.session.id);
     // Retreive the string after "/service/"  on URL as service name
-    var service = req.url.substring('/service/'.length + 1);
+    var service = req.url.substring('/service/'.length);
     logger.info("Receiving request : " + req.url);
     logger.debug("Service Name : [" + service + "]");
     if (service != ""){
