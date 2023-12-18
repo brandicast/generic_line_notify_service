@@ -1,10 +1,10 @@
 module.exports = {
         line_notify : {
             service: { 
-                "service1 ": {
+                "mimosa2 ": {
                     client_id  :  '' ,
                     client_secret : '', 
-                    redirect_uri : 'http://192.168.0.13:8888/code_receiver',
+                    redirect_uri : 'http://192.168.68.57:8888/code_receiver',  //this ip has to match your configuration on Line Notify
                     success_page : './resources/success.html',  
                     token_list_page : './resources/token_list.html' 
                 },
