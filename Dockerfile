@@ -1,18 +1,18 @@
 FROM node:latest
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /opt/line_notify_service
 
-WORKDIR /usr/src/app
+WORKDIR /opt/line_notify_service
 
-COPY package.json /usr/src/app/
+COPY package.json /opt/line_notify_service
 
 RUN npm install
 
-COPY *.js /usr/src/app/
+COPY *.js /opt/line_notify_service
 
-COPY public /usr/src/app/public
+COPY public /opt/line_notify_service/public
 
-COPY resources /usr/src/app/resources
+COPY resources /opt/line_notify_serviceresources
 
 EXPOSE 8888
 
